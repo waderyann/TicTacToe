@@ -18,6 +18,14 @@ public class Tictactoe {
 
 	private JFrame frame;
 	private JButton tac1_Btn;
+	private JButton tac2_Btn;
+	private JButton tac3_Btn;
+	private JButton tac4_Btn;
+	private JButton tac5_Btn;
+	private JButton tac6_Btn;
+	private JButton tac7_Btn;
+	private JButton tac8_Btn;
+	private JButton tac9_Btn;
 
 	/**
 	 * Launch the application.
@@ -83,7 +91,7 @@ public class Tictactoe {
 		tac1_Btn.setBounds(10, 11, 125, 125);
 		frame.getContentPane().add(tac1_Btn);
 		
-		JButton tac2_Btn = new JButton("");
+		tac2_Btn = new JButton("");
 		tac2_Btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if ((turn % 2 == 0)&&(button2 == false)){
@@ -104,7 +112,7 @@ public class Tictactoe {
 		tac2_Btn.setBounds(145, 11, 125, 125);
 		frame.getContentPane().add(tac2_Btn);
 		
-		JButton tac3_Btn = new JButton("");
+	    tac3_Btn = new JButton("");
 		tac3_Btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if ((turn % 2 == 0)&&(button3 == false)){
@@ -124,7 +132,7 @@ public class Tictactoe {
 		tac3_Btn.setBounds(280, 11, 125, 125);
 		frame.getContentPane().add(tac3_Btn);
 		
-		JButton tac4_Btn = new JButton("");
+		tac4_Btn = new JButton("");
 		tac4_Btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if ((turn % 2 == 0)&&(button4 == false)){
@@ -144,7 +152,7 @@ public class Tictactoe {
 		tac4_Btn.setBounds(10, 147, 125, 125);
 		frame.getContentPane().add(tac4_Btn);
 		
-		JButton tac5_Btn = new JButton("");
+		tac5_Btn = new JButton("");
 		tac5_Btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if ((turn % 2 == 0)&&(button5 == false)){
@@ -164,7 +172,7 @@ public class Tictactoe {
 		tac5_Btn.setBounds(145, 147, 125, 125);
 		frame.getContentPane().add(tac5_Btn);
 		
-		JButton tac6_Btn = new JButton("");
+		tac6_Btn = new JButton("");
 		tac6_Btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if ((turn % 2 == 0)&&(button6 == false)){
@@ -184,7 +192,7 @@ public class Tictactoe {
 		tac6_Btn.setBounds(280, 147, 125, 125);
 		frame.getContentPane().add(tac6_Btn);
 		
-		JButton tac7_Btn = new JButton("");
+		tac7_Btn = new JButton("");
 		tac7_Btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if ((turn % 2 == 0)&&(button7 == false)){
@@ -204,7 +212,7 @@ public class Tictactoe {
 		tac7_Btn.setBounds(10, 283, 125, 125);
 		frame.getContentPane().add(tac7_Btn);
 		
-		JButton tac8_Btn = new JButton("");
+		tac8_Btn = new JButton("");
 		tac8_Btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if ((turn % 2 == 0)&&(button8 == false)){
@@ -224,7 +232,7 @@ public class Tictactoe {
 		tac8_Btn.setBounds(145, 283, 125, 125);
 		frame.getContentPane().add(tac8_Btn);
 		
-		JButton tac9_Btn = new JButton("");
+		tac9_Btn = new JButton("");
 		tac9_Btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if ((turn % 2 == 0)&&(button9 == false)){
@@ -249,19 +257,7 @@ public class Tictactoe {
 		playAgain.setForeground(Color.WHITE);
 		playAgain.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				button1 = false; button2 = false; button3 = false; button4 = false; button5 = false; button6 = false; button7 = false; button8 = false; button9 = false;
-				x1 = false; x2 = false; x3 = false; x4 = false; x5 = false; x6 = false; x7 = false; x8 = false; x9 = false;
-				o1 = false; o2 = false; o3 = false; o4 = false; o5 = false; o6 = false; o7 = false; o8 = false; o9 = false;
-				turn = 0;
-				tac1_Btn.setIcon(new ImageIcon(Tictactoe.class.getResource("/ticTacToe/Resources/BLANK.png")));
-				tac2_Btn.setIcon(new ImageIcon(Tictactoe.class.getResource("/ticTacToe/Resources/BLANK.png")));
-				tac3_Btn.setIcon(new ImageIcon(Tictactoe.class.getResource("/ticTacToe/Resources/BLANK.png")));
-				tac4_Btn.setIcon(new ImageIcon(Tictactoe.class.getResource("/ticTacToe/Resources/BLANK.png")));
-				tac5_Btn.setIcon(new ImageIcon(Tictactoe.class.getResource("/ticTacToe/Resources/BLANK.png")));
-				tac6_Btn.setIcon(new ImageIcon(Tictactoe.class.getResource("/ticTacToe/Resources/BLANK.png")));
-				tac7_Btn.setIcon(new ImageIcon(Tictactoe.class.getResource("/ticTacToe/Resources/BLANK.png")));
-				tac8_Btn.setIcon(new ImageIcon(Tictactoe.class.getResource("/ticTacToe/Resources/BLANK.png")));
-				tac9_Btn.setIcon(new ImageIcon(Tictactoe.class.getResource("/ticTacToe/Resources/BLANK.png")));
+				resetGame();
 			}
 		});
 		playAgain.setBounds(145, 424, 125, 23);
@@ -274,13 +270,49 @@ public class Tictactoe {
 				((x3 == true)&&(x5 == true)&&(x7 == true)) || ((x3 == true)&&(x6 == true)&&(x9 == true)) || ((x7 == true)&&(x8 == true)&&(x9 == true))||
 				((x2 == true)&&(x5 == true)&&(x8 == true)) || ((x4 == true)&&(x5 == true)&&(x6 == true)) ) {
 			JOptionPane.showMessageDialog(frame,"X Wins!");
-			tac1_Btn.isEnabled() = false;
+			int a = JOptionPane.showConfirmDialog(frame, "Would you like to play Again?", "X Wins!", JOptionPane.YES_NO_OPTION);
+			if(a==JOptionPane.YES_OPTION){  
+				resetGame(); 
+			}else if(a == JOptionPane.NO_OPTION) {
+				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				System.exit(0);
+			}
 		}else if ( ((o1 == true)&&(o2 == true)&&(o3 == true)) || ((o1 == true)&&(o4 == true)&&(o7 == true)) || ((o1 == true)&&(o5 == true)&&(o9 == true)) ||
 				((o3 == true)&&(o5 == true)&&(o7 == true)) || ((o3 == true)&&(o6 == true)&&(o9 == true)) || ((o7 == true)&&(o8 == true)&&(o9 == true)) ||
 				((o2 == true)&&(o5 == true)&&(o8 == true)) || ((o4 == true)&&(o5 == true)&&(o6 == true))) {
 			JOptionPane.showMessageDialog(frame,"O Wins!");
+			int a = JOptionPane.showConfirmDialog(frame, "Would you like to play Again?", "O Wins!", JOptionPane.YES_NO_OPTION);
+			if(a==JOptionPane.YES_OPTION){  
+				resetGame(); 
+			}else if(a == JOptionPane.NO_OPTION) {
+				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+				System.exit(0);
+			}
 		}else if (turn == 9){
 			JOptionPane.showMessageDialog(frame,"Draw!");
+			int a = JOptionPane.showConfirmDialog(frame, "Would you like to play Again?", "Draw", JOptionPane.YES_NO_OPTION);
+			if(a==JOptionPane.YES_OPTION){  
+				resetGame(); 
+			}else if(a == JOptionPane.NO_OPTION) {
+				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				System.exit(0);
+			}
 		}
+	}
+	
+	public void resetGame(){
+		button1 = false; button2 = false; button3 = false; button4 = false; button5 = false; button6 = false; button7 = false; button8 = false; button9 = false;
+		x1 = false; x2 = false; x3 = false; x4 = false; x5 = false; x6 = false; x7 = false; x8 = false; x9 = false;
+		o1 = false; o2 = false; o3 = false; o4 = false; o5 = false; o6 = false; o7 = false; o8 = false; o9 = false;
+		turn = 0;
+		tac1_Btn.setIcon(new ImageIcon(Tictactoe.class.getResource("/ticTacToe/Resources/BLANK.png")));
+		tac2_Btn.setIcon(new ImageIcon(Tictactoe.class.getResource("/ticTacToe/Resources/BLANK.png")));
+		tac3_Btn.setIcon(new ImageIcon(Tictactoe.class.getResource("/ticTacToe/Resources/BLANK.png")));
+		tac4_Btn.setIcon(new ImageIcon(Tictactoe.class.getResource("/ticTacToe/Resources/BLANK.png")));
+		tac5_Btn.setIcon(new ImageIcon(Tictactoe.class.getResource("/ticTacToe/Resources/BLANK.png")));
+		tac6_Btn.setIcon(new ImageIcon(Tictactoe.class.getResource("/ticTacToe/Resources/BLANK.png")));
+		tac7_Btn.setIcon(new ImageIcon(Tictactoe.class.getResource("/ticTacToe/Resources/BLANK.png")));
+		tac8_Btn.setIcon(new ImageIcon(Tictactoe.class.getResource("/ticTacToe/Resources/BLANK.png")));
+		tac9_Btn.setIcon(new ImageIcon(Tictactoe.class.getResource("/ticTacToe/Resources/BLANK.png")));
 	}
 }
